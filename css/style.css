@@ -1,0 +1,133 @@
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+ul.buttons {
+  padding-left: 0px;
+  text-align: center;
+}
+
+ul.buttons > li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+ul.buttons > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  padding: 15px 20px;
+  min-height: 99%;
+  width: 100%;
+  min-width: 550px;
+  color: goldenrod;
+  background: #211d1b;
+  font-family: cursor, monospace;
+  overflow-x: hidden;
+}
+
+div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div ul li.active {
+  background-color: goldenrod;
+}
+
+div ul li {
+  --c: goldenrod;
+  color: var(--c);
+  font-size: 16px;
+  border: 0.3em solid var(--c);
+  border-radius: 0.5em;
+  width: 12em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+}
+
+div ul li span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+div ul li:hover {
+  color: black;
+}
+
+div ul li:hover span {
+  transform: translateY(0) scale(2);
+}
+
+div ul li span:nth-child(1) {
+  --n: 1;
+}
+
+div ul li span:nth-child(2) {
+  --n: 2;
+}
+
+div ul li span:nth-child(3) {
+  --n: 3;
+}
+
+div ul li span:nth-child(4) {
+  --n: 4;
+}
